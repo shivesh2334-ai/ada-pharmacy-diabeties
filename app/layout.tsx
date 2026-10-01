@@ -1,9 +1,5 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Source_Serif_4, IBM_Plex_Sans } from 'next/font/google';
-
-const serif = Source_Serif_4({ subsets: ['latin'], variable: '--font-serif' });
-const sans = IBM_Plex_Sans({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-sans' });
 
 export const metadata: Metadata = {
   title: 'Glycemic Treatment Navigator | ADA Standards of Care 2026, Section 9',
@@ -12,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
